@@ -1,1 +1,181 @@
-/* pages/result/result.wxss */
+page {
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+}
+
+.main {
+  position: relative;
+  height: 428px;
+  background: #EE1F10;
+  text-align: center;
+  overflow: hidden;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.share {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 93px;
+  height: 30px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+.share text {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  color: #FFEABD;
+  font-size: 12px;
+}
+
+.share::after {
+  border: none;
+}
+
+.share image {
+  width: inherit;
+  height: inherit;
+}
+
+.envelope {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  margin: auto;
+  width: 320px;
+  height: 350px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  margin-top: 105px;
+  font-size: 15px;
+  color: #969696;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  vertical-align:top;
+}
+
+.coupon {
+  margin-top: 10px;
+  font-size: 28px;
+  color: #E4393C;
+}
+
+.coupon-threshold {
+  font-size: 14px;
+  color: #969696;
+}
+
+.rules {
+  margin: 30px auto 0;
+  width: 248px;
+  font-size: 14px;
+  color: #940C05;
+  text-align: left;
+  line-height: 2;
+}
+
+.rule {
+  display: flex;
+}
+
+.rule-name {
+  flex-shrink: 0;
+}
+
+.result {
+  margin-top: 70px;
+  font-size: 16px;
+  color: #FFEABD;
+  line-height: 1.67;
+}
+
+.action {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 39px;
+  background: #FFA13C;
+  border-radius: 2px;
+  box-shadow: #D94139 0 0 6px 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.add {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #FFEABD;
+}
+
+.more-coupon {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px;
+  height: 38px;
+  text-align: center;
+}
+
+.semicircle {
+  position: relative;
+  top: -6px;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #EE1F10;
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+.more-coupon-bg {
+  width: 200px;
+  height: 38px;
+}
+
+.more-coupon-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: block;
+  width: 200px;
+  font-size: 16px;
+  line-height: 38px;
+  color: #C17010;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  width: 118px;
+  height: 116px;
+}
+
+.banner image {
+  width: inherit;
+  height: inherit;
+}

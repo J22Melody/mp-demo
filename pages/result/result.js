@@ -13,7 +13,14 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      'coupon': wx.getStorageSync('coupon')
+      // coupon: wx.getStorageSync('coupon')
+      coupon: {
+        type: 'scan',
+        amount: 10,
+        threshold: 100,
+        notice: '仅适用于沃尔玛扫码购支付',
+        deadline: '2018.08.01-2018.08.08，周一至周日全天'
+      }
     })
     console.log(this.data)
   },
@@ -63,7 +70,10 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function (res) {
+    return {
+      title: '自定义转发标题',
+      path: '/page/user?id=123'
+    }
   }
 })

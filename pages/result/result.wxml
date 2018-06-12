@@ -1,2 +1,86 @@
-<!--pages/result/result.wxml-->
-<text>pages/result/result.wxml</text>
+<view class="main">
+  <image class="bg" src="./images/bg.png" mode="widthFix"></image>
+  <image class="envelope" src="./images/envelope.png"></image>
+
+  <button class="share" open-type="share">
+    <image src="./images/share.png"></image>
+    <text>分享给好友</text>
+  </button>
+  
+  <view wx:if="{{coupon}}" class="content">
+    <view class="title">
+      <block wx:if="{{coupon.type === 'scan'}}">
+        <image class="icon" src="./images/icon-scan.png" mode="center"></image>
+        沃尔玛扫码购优惠券
+      </block>
+
+      <block wx:if="{{coupon.type === 'mart'}}">
+        <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
+        沃尔玛超市优惠券
+      </block>
+    </view>
+
+    <view class="coupon">
+      <view>￥{{coupon.amount}}</view>
+      <view class="coupon-threshold">满 ￥{{coupon.threshold}} 元可用</view>
+    </view>
+
+    <view class="rules">
+      <view class="rule"><text class="rule-name">使用须知：</text><text>{{coupon.notice}}</text></view>
+      <view class="rule"><text class="rule-name">使用期限：</text><text>{{coupon.deadline}}</text></view>
+    </view>
+
+    <navigator class="action" url="/pages/index/index">
+      立即使用
+    </navigator>
+
+    <view class="add">
+      您可点击微信通知添加到卡包
+    </view>
+  </view>
+
+  <view wx:if="{{!coupon}}" class="content">
+    <view class="title">
+      <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
+    </view>
+
+    <view class="coupon">
+      感谢参与
+    </view>
+
+    <view class="result">
+      <view>今天没有抽到优惠券</view>
+      <view>明天再来试试吧~</view>
+    </view>
+
+    <navigator class="action" url="/pages/index/index">
+      我知道了
+    </navigator>
+  </view>
+</view>
+
+<view class="more-coupon">
+  <view class="semicircle" />
+  <view class="semicircle" />
+  <view class="semicircle" />
+
+  <image class="more-coupon-bg" src="./images/more-coupon.png"></image>
+
+  <view class="semicircle" />
+  <view class="semicircle" />
+  <view class="semicircle" />
+
+  <text class="more-coupon-text">更多优惠券在这里哦</text>
+</view>
+
+<view class="footer">
+  <navigator class="banner" url="/pages/index/index">
+    <image src="./images/banner1.png"></image>
+  </navigator>
+  <navigator class="banner" url="/pages/index/index">
+    <image src="./images/banner2.png"></image>
+  </navigator>
+  <navigator class="banner" url="/pages/index/index">
+    <image src="./images/banner3.png"></image>
+  </navigator>
+</view>
