@@ -7,22 +7,22 @@
     <text>分享给好友</text>
   </button>
   
-  <view wx:if="{{coupon}}" class="content">
+  <view wx:if="{{coupon.omniCouponType !== 'NO_COUPON'}}" class="content">
     <view class="title">
-      <block wx:if="{{coupon.type === 'scan'}}">
+      <block wx:if="{{coupon.omniCouponType === 'scan'}}">
         <image class="icon" src="./images/icon-scan.png" mode="center"></image>
-        沃尔玛扫码购优惠券
+        {{coupon.couponName}}
       </block>
 
-      <block wx:if="{{coupon.type === 'mart'}}">
+      <block wx:if="{{coupon.omniCouponType === 'WALMART'}}">
         <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
-        沃尔玛超市优惠券
+        {{coupon.couponName}}
       </block>
     </view>
 
     <view class="coupon">
-      <view>￥{{coupon.amount}}</view>
-      <view class="coupon-threshold">满 ￥{{coupon.threshold}} 元可用</view>
+      <view>￥{{coupon.couponValue / 100}}</view>
+      <view class="coupon-threshold">满 ￥{{coupon.couponMininum / 100}} 元可用</view>
     </view>
 
     <view class="rules">
@@ -39,7 +39,7 @@
     </view>
   </view>
 
-  <view wx:if="{{!coupon}}" class="content">
+  <view wx:if="{{coupon.omniCouponType === 'NO_COUPON'}}" class="content">
     <view class="title">
       <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
     </view>
@@ -74,7 +74,7 @@
 </view>
 
 <view class="footer">
-  <navigator class="banner" url="/pages/index/index">
+  <navigator class="banner" target="miniProgram" app-id="wx8106a5868f26d656">
     <image src="./images/banner1.png"></image>
   </navigator>
   <navigator class="banner" url="/pages/index/index">

@@ -12,17 +12,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const coupon = wx.getStorageSync('coupon')
+
     this.setData({
-      // coupon: wx.getStorageSync('coupon')
-      coupon: {
-        type: 'scan',
-        amount: 10,
-        threshold: 100,
-        notice: '仅适用于沃尔玛扫码购支付',
-        deadline: '2018.08.01-2018.08.08，周一至周日全天'
-      }
+      coupon,
     })
-    console.log(this.data)
   },
 
   /**
