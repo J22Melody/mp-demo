@@ -13,10 +13,21 @@ Page({
    */
   onLoad: function (options) {
     const coupon = wx.getStorageSync('coupon')
+    let count = 0
 
     this.setData({
       coupon,
+      more: '更多优惠在这里哦'
     })
+
+    setInterval(() => {
+      this.setData({
+        coupon,
+        more: count % 2 === 0 ? '点击即可领取' : '更多优惠在这里哦'
+      })
+
+      count = count + 1
+    }, 2000)
   },
 
   /**

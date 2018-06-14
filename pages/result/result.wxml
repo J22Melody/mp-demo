@@ -46,11 +46,11 @@
 
     <view class="coupon">
       感谢参与
+      <view class="coupon-threshold">明天再来试试吧~</view>
     </view>
 
     <view class="result">
-      <view>今天没有抽到优惠券</view>
-      <view>明天再来试试吧~</view>
+      <view>请点击下方的横幅来获得其他的优惠券吧～</view>
     </view>
 
     <navigator class="action" url="/pages/index/index">
@@ -70,7 +70,7 @@
   <view class="semicircle" />
   <view class="semicircle" />
 
-  <text class="more-coupon-text">更多优惠券在这里哦</text>
+  <text class="more-coupon-text">{{more}}</text>
 </view>
 
 <view class="footer">
@@ -79,8 +79,5 @@
   </navigator>
   <navigator class="banner" url="/pages/index/index">
     <image src="./images/banner2.png"></image>
-  </navigator>
-  <navigator class="banner" url="/pages/index/index">
-    <image src="./images/banner3.png"></image>
   </navigator>
 </view>

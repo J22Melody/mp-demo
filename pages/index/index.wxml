@@ -1,1 +1,1 @@
-<web-view src="https://mp-demo.flyingant.me/" bindmessage="message"></web-view>
+<web-view src="https://mp-demo.flyingant.me/?openId=test-openid&userToken=test-token&coordinate=737843.123,322.53896&hasSnG=true" bindmessage="message"></web-view>

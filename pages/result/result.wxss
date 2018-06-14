@@ -103,7 +103,8 @@ page {
 }
 
 .result {
-  margin-top: 70px;
+  margin:70px auto 0;
+  width: 230px;
   font-size: 16px;
   color: #FFEABD;
   line-height: 1.67;
@@ -171,11 +172,12 @@ page {
 }
 
 .banner {
-  width: 118px;
-  height: 116px;
+  width: 178px;
+  height: 140px;
 }
 
 .banner image {
+  display: block;
   width: inherit;
   height: inherit;
 }
