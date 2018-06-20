@@ -80,8 +80,9 @@ Page({
    */
   onShareAppMessage: function (res) {
     return {
-      title: '自定义转发标题',
-      path: '/pages/index/index'
+      title: '扫玛购专属优惠券，幸运抽奖high不停！',
+      path: '/pages/landing/landing',
+      imageUrl: './images/share-bg.jpg',
     }
   },
 
