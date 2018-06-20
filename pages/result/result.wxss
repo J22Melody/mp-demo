@@ -19,6 +19,7 @@ page {
 
 .share {
   position: absolute;
+  z-index: 10;
   top: 10px;
   right: 0;
   width: 93px;
@@ -53,8 +54,8 @@ page {
   left: 0;
   z-index: 1;
   margin: auto;
-  width: 320px;
-  height: 350px;
+  width: 375px;
+  height: 426px;
 }
 
 .content {
@@ -63,7 +64,7 @@ page {
 }
 
 .title {
-  margin-top: 105px;
+  margin-top: 75px;
   font-size: 15px;
   color: #969696;
 }
@@ -86,12 +87,14 @@ page {
 }
 
 .rules {
-  margin: 30px auto 0;
-  width: 248px;
+  margin: 22px auto 0;
+  width: 290px;
+  height: 140px;
   font-size: 14px;
   color: #940C05;
   text-align: left;
-  line-height: 2;
+  line-height: 1.67;
+  overflow: scroll;
 }
 
 .rule {
@@ -112,7 +115,7 @@ page {
 
 .action {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 10px;
   padding: 12px 39px;
   background: #FFA13C;
   border-radius: 2px;

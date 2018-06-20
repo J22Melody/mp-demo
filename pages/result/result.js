@@ -16,13 +16,16 @@ Page({
     let count = 0
 
     this.setData({
-      coupon,
+      coupon: coupon.omniCouponType !== 'NO_COUPON' && {
+        ...coupon,
+        begin: coupon.beginTime.slice(0, 4) + '-' + coupon.beginTime.slice(4, 6) + '-' + coupon.beginTime.slice(6, 8),
+        end: coupon.endTime.slice(0, 4) + '-' + coupon.endTime.slice(4, 6) + '-' + coupon.endTime.slice(6, 8),
+      },
       more: '更多优惠在这里哦'
     })
 
     setInterval(() => {
       this.setData({
-        coupon,
         more: count % 2 === 0 ? '点击即可领取' : '更多优惠在这里哦'
       })
 
@@ -78,7 +81,11 @@ Page({
   onShareAppMessage: function (res) {
     return {
       title: '自定义转发标题',
-      path: '/page/user?id=123'
+      path: '/pages/index/index'
     }
+  },
+
+  test: function (res) {
+    wx.reportAnalytics('test_click_link', {});
   }
 })

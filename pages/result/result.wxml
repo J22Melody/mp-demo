@@ -7,7 +7,7 @@
     <text>分享给好友</text>
   </button>
   
-  <view wx:if="{{coupon.omniCouponType !== 'NO_COUPON'}}" class="content">
+  <view wx:if="{{coupon}}" class="content">
     <view class="title">
       <block wx:if="{{coupon.omniCouponType === 'scan'}}">
         <image class="icon" src="./images/icon-scan.png" mode="center"></image>
@@ -26,11 +26,17 @@
     </view>
 
     <view class="rules">
-      <view class="rule"><text class="rule-name">使用须知：</text><text>{{coupon.notice}}</text></view>
-      <view class="rule"><text class="rule-name">使用期限：</text><text>{{coupon.deadline}}</text></view>
+      <view class="rule">
+        <text class="rule-name">使用须知：</text>
+        <text>{{coupon.couponDesc}}</text>
+      </view>
+      <view class="rule">
+        <text class="rule-name">使用期限：</text>
+        <text>{{coupon.begin}} 至 {{coupon.end}}</text>
+      </view>
     </view>
 
-    <navigator class="action" url="/pages/index/index">
+    <navigator class="action" url="/pages/landing/landing">
       立即使用
     </navigator>
 
@@ -39,7 +45,7 @@
     </view>
   </view>
 
-  <view wx:if="{{coupon.omniCouponType === 'NO_COUPON'}}" class="content">
+  <view wx:if="{{!coupon}}" class="content">
     <view class="title">
       <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
     </view>
@@ -53,7 +59,7 @@
       <view>请点击下方的横幅来获得其他的优惠券吧～</view>
     </view>
 
-    <navigator class="action" url="/pages/index/index">
+    <navigator class="action" url="/pages/landing/landing">
       我知道了
     </navigator>
   </view>
@@ -74,10 +80,10 @@
 </view>
 
 <view class="footer">
-  <navigator class="banner" target="miniProgram" app-id="wx8106a5868f26d656">
-    <image src="./images/banner1.png"></image>
+  <navigator bindtap="test" class="banner" target="miniProgram" app-id="wxcdc13dc8495e174e" path="/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4R1FivQhRMNQWRJ4v3f6MDAi3Tvr/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1">
+    <image src="./images/banner1.jpg"></image>
   </navigator>
-  <navigator class="banner" url="/pages/index/index">
-    <image src="./images/banner2.png"></image>
+  <navigator bindtap="test" class="banner" target="miniProgram" app-id="wxffb7d80f8c50ac5c" path="/pages/home/home?activityId=109670&type=12&&business=107">
+    <image src="./images/banner2.jpg"></image>
   </navigator>
 </view>
