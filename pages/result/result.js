@@ -87,6 +87,6 @@ Page({
   },
 
   test: function (res) {
-    wx.reportAnalytics('test_click_link', {});
+    // wx.reportAnalytics('test_click_link', {});
   }
 })

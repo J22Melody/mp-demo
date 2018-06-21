@@ -36,7 +36,7 @@
       </view>
     </view>
 
-    <navigator class="action" url="/pages/landing/landing">
+    <navigator class="action" url="/pages/cart/cart">
       立即使用
     </navigator>
 
@@ -59,7 +59,7 @@
       <view>请点击下方的横幅来获得其他的优惠券吧～</view>
     </view>
 
-    <navigator class="action" url="/pages/landing/landing">
+    <navigator class="action" url="/pages/cart/cart">
       我知道了
     </navigator>
   </view>

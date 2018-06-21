@@ -7,7 +7,8 @@ Page({
   },
   onLoad: function () {
     this.setData({
-      openId: Math.random().toString().slice(2),
+      // openId: Math.random().toString().slice(2),
+      openId: 'ouj0M0Vao60f9XPGyYeF7rHVFfYk',
     })
   },
   message: function (e) {

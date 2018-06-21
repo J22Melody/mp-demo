@@ -1,1 +1,1 @@
- <web-view src="https://fmi-dev-walmart.wiredcraft.cn/landing-page/?openId={{openId}}&userToken=test-token&coordinate=737843.123,322.53896&hasSnG=true" bindmessage="message"></web-view> 
+ <web-view src="https://uat-secure.walmartmobile.cn/landing-page/?openId={{openId}}&userToken=test-token&coordinate=737843.123,322.53896&hasSnG=true" bindmessage="message"></web-view> 

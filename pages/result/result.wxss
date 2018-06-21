@@ -87,7 +87,7 @@ page {
 }
 
 .rules {
-  margin: 22px auto 0;
+  margin: 30px auto 0;
   width: 290px;
   height: 140px;
   font-size: 14px;
