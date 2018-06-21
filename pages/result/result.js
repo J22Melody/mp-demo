@@ -82,7 +82,7 @@ Page({
     return {
       title: '扫玛购专属优惠券，幸运抽奖high不停！',
       path: '/pages/landing/landing',
-      imageUrl: './images/share-bg.jpg',
+      imageUrl: 'https://mco-image-stage.walmartmobile.cn/image/share-bg.jpg',
     }
   },
 
