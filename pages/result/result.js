@@ -1,3 +1,29 @@
+function compareVersion(v1, v2) {
+  v1 = v1.split('.')
+  v2 = v2.split('.')
+  var len = Math.max(v1.length, v2.length)
+
+  while (v1.length < len) {
+    v1.push('0')
+  }
+  while (v2.length < len) {
+    v2.push('0')
+  }
+
+  for (var i = 0; i < len; i++) {
+    var num1 = parseInt(v1[i])
+    var num2 = parseInt(v2[i])
+
+    if (num1 > num2) {
+      return 1
+    } else if (num1 < num2) {
+      return -1
+    }
+  }
+
+  return 0
+}
+
 // pages/result/result.js
 Page({
 
@@ -12,10 +38,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const useNavigator = compareVersion(wx.getSystemInfoSync().SDKVersion, '2.0.7') > -1
     const coupon = wx.getStorageSync('coupon')
     let count = 0
 
     this.setData({
+      useNavigator,
       coupon: coupon && coupon.omniCouponType !== 'NO_COUPON' && {
         ...coupon,
         begin: coupon.beginTime.slice(0, 4) + '-' + coupon.beginTime.slice(4, 6) + '-' + coupon.beginTime.slice(6, 8),
@@ -86,7 +114,23 @@ Page({
     }
   },
 
-  test: function (res) {
-    // wx.reportAnalytics('test_click_link', {});
+  onClickLink1: function (e) {
+    // wx.reportAnalytics('test_click_link', {})
+    if (!this.data.useNavigator) {
+      wx.navigateToMiniProgram({
+        appId: "wxcdc13dc8495e174e",
+        path: "/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4R1FivQhRMNQWRJ4v3f6MDAi3Tvr/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1",
+      })
+    }
+  },
+
+  onClickLink2: function (e) {
+    // wx.reportAnalytics('test_click_link', {})
+    if (!this.data.useNavigator) {
+      wx.navigateToMiniProgram({
+        appId: "wxffb7d80f8c50ac5c",
+        path: "/pages/home/home?activityId=109670&type=12&&business=107",
+      })
+    }
   }
 })
