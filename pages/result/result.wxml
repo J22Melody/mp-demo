@@ -76,7 +76,7 @@
   <view class="semicircle" />
   <view class="semicircle" />
 
-  <text class="more-coupon-text">{{more}}</text>
+  <text class="more-coupon-text">↓{{more}}↓</text>
 </view>
 
 <view class="footer">
