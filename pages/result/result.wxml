@@ -27,13 +27,13 @@
 
     <view class="rules">
       <view class="rule">
-        <text class="rule-name">使用须知：</text>
+        <view class="rule-name">使用须知：</view>
         <text>{{coupon.couponDesc}}</text>
       </view>
-      <view class="rule">
+      <!-- <view class="rule">
         <text class="rule-name">使用期限：</text>
         <text>{{coupon.begin}} 至 {{coupon.end}}</text>
-      </view>
+      </view> -->
     </view>
 
     <navigator class="action" url="/pages/cart/cart">

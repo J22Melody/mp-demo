@@ -99,13 +99,13 @@ page {
   overflow: scroll;
 }
 
-.rule {
+/* .rule {
   display: flex;
 }
 
 .rule-name {
   flex-shrink: 0;
-}
+} */
 
 .result {
   margin:70px auto 0;
