@@ -119,7 +119,7 @@ Page({
     if (!this.data.useNavigator) {
       wx.navigateToMiniProgram({
         appId: "wxcdc13dc8495e174e",
-        path: "/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4R1FivQhRMNQWRJ4v3f6MDAi3Tvr/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1",
+        path: `/pages/activityH5/activityH5?redirectUrl=${encodeURIComponent('https://pro.m.jd.com/mini/active/4R1FivQhRMNQWRJ4v3f6MDAi3Tvr/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1')}`,
       })
     }
   },
