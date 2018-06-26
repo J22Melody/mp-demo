@@ -27,7 +27,7 @@
 
     <view class="rules">
       <view class="rule">
-        <view class="rule-name">使用须知：</view>
+        <view class="rule-name">使用须知（上下滑动查看更多）</view>
         <text>{{coupon.couponDesc}}</text>
       </view>
       <!-- <view class="rule">
