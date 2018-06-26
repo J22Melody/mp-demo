@@ -115,7 +115,7 @@ Page({
   },
 
   onClickLink1: function (e) {
-    // wx.reportAnalytics('test_click_link', {})
+    wx.reportAnalytics('wfs_88_banner', {})
     if (!this.data.useNavigator) {
       wx.navigateToMiniProgram({
         appId: "wxcdc13dc8495e174e",
@@ -125,7 +125,7 @@ Page({
   },
 
   onClickLink2: function (e) {
-    // wx.reportAnalytics('test_click_link', {})
+    wx.reportAnalytics('jddj_88_banner', {})
     if (!this.data.useNavigator) {
       wx.navigateToMiniProgram({
         appId: "wxffb7d80f8c50ac5c",
