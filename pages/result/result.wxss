@@ -2,9 +2,17 @@ page {
   font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
 }
 
-.main {
+.main-wrapper {
   position: relative;
   background: #ED1C10;
+}
+
+.main-wrapper--highDevice {
+  padding-top: 70px;
+}
+
+.main {
+  position: relative;
   text-align: center;
   overflow: hidden;
 }
@@ -27,6 +35,10 @@ page {
   height: inherit;
 }
 
+.main-wrapper--highDevice .back {
+  top: 16px;
+}
+
 .share {
   position: absolute;
   z-index: 10;
@@ -47,6 +59,19 @@ page {
 .share image {
   width: inherit;
   height: inherit;
+}
+
+.main-wrapper--highDevice .share {
+  top: 16px;
+}
+
+.firework {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  width: 59px;
+  height: 58px;
 }
 
 .envelope {

@@ -1,6 +1,4 @@
-<view class="main">
-  <image class="envelope" src="./images/envelope{{ coupon ? '' : '-empty' }}.png" mode="scaleToFill"></image>
-  
+<view class="main-wrapper {{highDevice ? 'main-wrapper--highDevice' : ''}}">
   <navigator class="back" url="/pages/landing/landing">
     <image src="./images/88.png"></image>
   </navigator>
@@ -8,37 +6,43 @@
   <button class="share" open-type="share">
     <image src="./images/share.png"></image>
   </button>
-  
-  <view wx:if="{{coupon}}" class="content">
-    <view class="title">
-      {{coupon.couponName}}
+
+  <image wx-if="{{highDevice}}" class="firework" src="./images/fireworks.png"></image>
+
+  <view class="main">
+    <image class="envelope" src="./images/envelope{{ coupon ? '' : '-empty' }}.png" mode="scaleToFill"></image>
+    
+    <view wx:if="{{coupon}}" class="content">
+      <view class="title">
+        {{coupon.couponName}}
+      </view>
+
+      <view class="coupon">
+        <view class="coupon-amount"><text class="coupon-small">￥</text>{{coupon.couponValue / 100}}</view>
+        <view class="coupon-threshold">满 ￥{{coupon.couponMininum / 100}} 元可用</view>
+      </view>
+
+      <navigator class="action" url="/pages/cart/cart">
+        立即使用
+      </navigator>
+
+      <view class="add">
+        您可点击微信通知添加到卡包
+      </view>
     </view>
 
-    <view class="coupon">
-      <view class="coupon-amount"><text class="coupon-small">￥</text>{{coupon.couponValue / 100}}</view>
-      <view class="coupon-threshold">满 ￥{{coupon.couponMininum / 100}} 元可用</view>
-    </view>
+    <view wx:if="{{!coupon}}" class="content">
+      <view class="thanks">
+        感谢参与
+      </view>
 
-    <navigator class="action" url="/pages/cart/cart">
-      立即使用
-    </navigator>
+      <navigator class="action" url="/pages/cart/cart">
+        我知道了
+      </navigator>
 
-    <view class="add">
-      您可点击微信通知添加到卡包
-    </view>
-  </view>
-
-  <view wx:if="{{!coupon}}" class="content">
-    <view class="thanks">
-      感谢参与
-    </view>
-
-    <navigator class="action" url="/pages/cart/cart">
-      我知道了
-    </navigator>
-
-    <view class="add">
-      请点击下方的横幅来获得其他的优惠券吧～
+      <view class="add">
+        请点击下方的横幅来获得其他的优惠券吧～
+      </view>
     </view>
   </view>
 </view>

@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/result/result",
-    "pages/landing/landing"    
+    "pages/landing/landing"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -72,6 +72,7 @@ Page({
       // coupon: null,
       more: '更多优惠券在这里哦',
       collapse: true,
+      highDevice: wx.getSystemInfoSync().windowHeight > 700,
     })
 
     setInterval(() => {
