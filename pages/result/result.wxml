@@ -71,10 +71,18 @@
 </view>
 
 <view class="footer">
-  <navigator bindtap="onClickLink1" class="banner" target="miniProgram" app-id="wxcdc13dc8495e174e" path="/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4R1FivQhRMNQWRJ4v3f6MDAi3Tvr/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1">
-    <image src="https://mco-image-stage.walmartmobile.cn/image/banner1.jpg"></image>
-  </navigator>
-  <navigator bindtap="onClickLink2" class="banner" target="miniProgram" app-id="wxffb7d80f8c50ac5c" path="/pages/home/home?activityId=109670&type=12&&business=107">
-    <image src="https://mco-image-stage.walmartmobile.cn/image/banner2.jpg"></image>
-  </navigator>
+  <view class="footer-left">
+    <navigator bindtap="onClickLink1" class="banner" target="miniProgram" app-id="wxcdc13dc8495e174e" path="/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4R1FivQhRMNQWRJ4v3f6MDAi3Tvr/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1">
+      <image src="./images/banner1.png" mode="widthFix"></image>
+    </navigator>
+    <navigator bindtap="onClickLink2" class="banner" target="miniProgram" app-id="wxffb7d80f8c50ac5c" path="/pages/home/home?activityId=109670&type=12&&business=107">
+      <image src="./images/banner2.png" mode="widthFix"></image>
+    </navigator>
+  </view>
+
+  <view class="footer-right">
+    <navigator bindtap="onClickLink2" class="footer-right banner" target="miniProgram" app-id="wxffb7d80f8c50ac5c" path="/pages/home/home?activityId=109670&type=12&&business=107">
+      <image src="./images/banner3.png" mode="widthFix"></image>
+    </navigator>
+  </view>
 </view>

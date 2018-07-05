@@ -119,8 +119,8 @@ page {
 }
 
 .rules {
-  margin: 8px 10px;
-  padding-top: 10px;
+  margin: 8px 8px;
+  padding-top: 8px;
   border: 1px solid #FCBB30;
   border-radius: 4px;
   font-size: 13px;
@@ -198,18 +198,26 @@ page {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 calc((100vw - 178px * 2) / 3);
+  padding: 0 8px 8px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: calc((100vw - 3 * 8px) / 35 * 23);
+}
+
+.footer-right {
+  width: calc((100vw - 3 * 8px) / 35 * 12);
 }
 
 .banner {
-  width: 178px;
-  max-width: 50vw;
-  height: 140px;
+  display: block;
+  width: inherit;
 }
 
 .banner image {
   display: block;
   width: inherit;
-  max-width: inherit;
-  height: inherit;
 }
