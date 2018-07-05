@@ -69,6 +69,7 @@ Page({
       //   beginTime: '20180608000000',
       //   endTime: '20180615235959',
       // },
+      // coupon: null,
       more: '更多优惠券在这里哦',
       collapse: true,
     })
