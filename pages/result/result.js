@@ -49,12 +49,33 @@ Page({
         begin: coupon.beginTime.slice(0, 4) + '-' + coupon.beginTime.slice(4, 6) + '-' + coupon.beginTime.slice(6, 8),
         end: coupon.endTime.slice(0, 4) + '-' + coupon.endTime.slice(4, 6) + '-' + coupon.endTime.slice(6, 8),
       },
-      more: '更多优惠在这里哦'
+      // coupon: {
+      //   couponDesc: `- 限扫玛购微信支付，单笔支付金额大于100元(含100元)可自动抵扣1.7元；
+      //         - 购物券有效期2018年6月26日至2018年6月29日，请在有效期内使用；
+      //         - 享受优惠若发生退款，相应优惠根据退款总额同比例扣除；
+      //         - 限扫玛购使用，详情可见店内公告或咨询店员；
+      //         - 本券不适用于购买礼品卡及大单购物。`,
+      //   couponId: '1442',
+      //   couponMininum: 10000,
+      //   couponName: '测试代金券',
+      //   couponRemainValue: '5',
+      //   couponState: 'SENDED',
+      //   couponStockId: '1717',
+      //   couponUseValue: '0',
+      //   couponValue: 50,
+      //   sendSource: 'FULL_SEND',
+      //   omniCouponType: 'WALMART',
+      //   omniCouponTypeId: '6f282bf5-3b29-4e47-8e81-cc90ee070293',
+      //   beginTime: '20180608000000',
+      //   endTime: '20180615235959',
+      // },
+      more: '更多优惠券在这里哦',
+      collapse: true,
     })
 
     setInterval(() => {
       this.setData({
-        more: count % 2 === 0 ? '点击即可领取' : '更多优惠在这里哦'
+        more: count % 2 === 0 ? '点击下方图片领取' : '更多优惠券在这里哦'
       })
 
       count = count + 1
@@ -132,5 +153,11 @@ Page({
         path: "/pages/home/home?activityId=109670&type=12&&business=107",
       })
     }
-  }
+  },
+
+  onClickMore: function (e) {
+    this.setData({
+      collapse: !this.data.collapse,
+    })
+  },
 })

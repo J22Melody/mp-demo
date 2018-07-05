@@ -4,38 +4,39 @@ page {
 
 .main {
   position: relative;
-  height: 428px;
-  background: #EE1F10;
   text-align: center;
   overflow: hidden;
 }
 
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.share {
+.back {
   position: absolute;
   z-index: 10;
-  top: 10px;
-  right: 0;
-  width: 93px;
-  height: 30px;
+  top: 6px;
+  left: 6px;
+  width: 82px;
+  height: 76px;
   padding: 0;
   background: transparent;
   border: none;
   border-radius: 0;
 }
 
-.share text {
+.back image {
+  width: inherit;
+  height: inherit;
+}
+
+.share {
   position: absolute;
-  top: 0;
-  left: 28px;
-  color: #FFEABD;
-  font-size: 12px;
+  z-index: 10;
+  top: 6px;
+  right: 6px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
 .share::after {
@@ -48,63 +49,52 @@ page {
 }
 
 .envelope {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  margin: auto;
-  width: 375px;
-  max-width:100vw;
-  height: 426px;
+  display: block;
+  width: 100%;
 }
 
 .content {
-  position: relative;
+  position: absolute;
+  top: 0;
   z-index: 2;
+  width: 100%;
 }
 
 .title {
-  margin-top: 75px;
+  margin-top: 58px;
   font-size: 15px;
-  color: #969696;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  vertical-align:top;
+  color: #fff;
 }
 
 .coupon {
-  margin-top: 10px;
-  font-size: 28px;
+  margin-top: 4px;
   color: #E4393C;
 }
 
+.coupon-amount {
+  font-size: 40px;
+  font-weight: 500; 
+}
+
+.coupon-small {
+  font-size: 18px;
+}
+
 .coupon-threshold {
+  margin-top: -4px;
   font-size: 14px;
-  color: #969696;
 }
 
-.rules {
-  margin: 30px auto 0;
-  width: 290px;
-  max-width: 80vw;
-  height: 140px;
-  font-size: 14px;
-  color: #940C05;
-  text-align: left;
-  line-height: 1.67;
-  overflow: scroll;
-}
-
-.rule-name {
-  text-align: center;
+.thanks {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 500;
+  color: #E4393C;
 }
 
 .result {
-  margin:70px auto 0;
+  margin: 70px auto 0;
   width: 230px;
   font-size: 16px;
   color: #FFEABD;
@@ -113,9 +103,9 @@ page {
 
 .action {
   display: inline-block;
-  margin-top: 10px;
-  padding: 12px 39px;
-  background: #FFA13C;
+  margin-top: 18px;
+  padding: 6px 30px;
+  background: #FFD200;
   border-radius: 2px;
   box-shadow: #D94139 0 0 6px 0;
   color: #fff;
@@ -128,6 +118,55 @@ page {
   color: #FFEABD;
 }
 
+.rules {
+  margin: 8px 10px;
+  padding-top: 10px;
+  border: 1px solid #FCBB30;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #D27F00;
+  text-align: left;
+  line-height: 1.67;
+}
+
+.rule {
+  padding: 0 14px 6px;
+}
+
+.rules--collapse .rule {
+  height: 60px;
+  overflow: hidden;
+}
+
+.rule-name {
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rule-more {
+  font-size: 14px;
+  font-weight: 600;
+  color: #D27F00;
+  background: #FFFCE4;
+  
+}
+
+.rule-more::after {
+  border: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.rule-empty {
+  margin: 16px 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #D27F00;
+  text-align: center;
+}
+
 .more-coupon {
   position: relative;
   display: flex;
@@ -137,20 +176,9 @@ page {
   text-align: center;
 }
 
-.semicircle {
-  position: relative;
-  top: -6px;
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  background: #EE1F10;
-  border-radius: 50%;
-  vertical-align: top;
-}
-
 .more-coupon-bg {
-  width: 200px;
-  height: 38px;
+  width: 357px;
+  height: 34px;
 }
 
 .more-coupon-text {
@@ -163,8 +191,8 @@ page {
   display: block;
   width: 200px;
   font-size: 16px;
-  line-height: 38px;
-  color: #C17010;
+  line-height: 34px;
+  color: #fff;
 }
 
 .footer {

@@ -1,39 +1,22 @@
 <view class="main">
-  <image class="bg" src="./images/bg.png" mode="widthFix"></image>
-  <image class="envelope" src="./images/envelope.png"></image>
+  <image class="envelope" src="./images/envelope{{ coupon ? '' : '-empty' }}.png"></image>
+  
+  <navigator class="back" url="/pages/landing/landing">
+    <image src="./images/88.png"></image>
+  </navigator>
 
   <button class="share" open-type="share">
     <image src="./images/share.png"></image>
-    <text>分享给好友</text>
   </button>
   
   <view wx:if="{{coupon}}" class="content">
     <view class="title">
-      <block wx:if="{{coupon.omniCouponType === 'scan'}}">
-        <image class="icon" src="./images/icon-scan.png" mode="center"></image>
-        {{coupon.couponName}}
-      </block>
-
-      <block wx:if="{{coupon.omniCouponType === 'WALMART'}}">
-        <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
-        {{coupon.couponName}}
-      </block>
+      {{coupon.couponName}}
     </view>
 
     <view class="coupon">
-      <view>￥{{coupon.couponValue / 100}}</view>
+      <view class="coupon-amount"><text class="coupon-small">￥</text>{{coupon.couponValue / 100}}</view>
       <view class="coupon-threshold">满 ￥{{coupon.couponMininum / 100}} 元可用</view>
-    </view>
-
-    <view class="rules">
-      <view class="rule">
-        <view class="rule-name">使用须知（上下滑动查看更多）</view>
-        <text>{{coupon.couponDesc}}</text>
-      </view>
-      <!-- <view class="rule">
-        <text class="rule-name">使用期限：</text>
-        <text>{{coupon.begin}} 至 {{coupon.end}}</text>
-      </view> -->
     </view>
 
     <navigator class="action" url="/pages/cart/cart">
@@ -45,38 +28,46 @@
     </view>
   </view>
 
-  <view wx:if="{{!coupon}}" class="content">
-    <view class="title">
-      <image class="icon" src="./images/icon-walmart.png" mode="center"></image>
-    </view>
-
-    <view class="coupon">
+  <view wx:if="{{!coupon}}" class="content content--nocoupon">
+    <view class="thanks">
       感谢参与
-      <view class="coupon-threshold">明天再来试试吧~</view>
-    </view>
-
-    <view class="result">
-      <view>请点击下方的横幅来获得其他的优惠券吧～</view>
     </view>
 
     <navigator class="action" url="/pages/cart/cart">
       我知道了
     </navigator>
+
+    <view class="add">
+      请点击下方的横幅来获得其他的优惠券吧～
+    </view>
+  </view>
+</view>
+
+<view class="rules {{collapse ? 'rules--collapse' : ''}}">
+  <view wx:if="{{coupon}}" class="rule">
+    <view class="rule-name">使用须知</view>
+    <text>{{coupon.couponDesc}}</text>
+  </view>
+
+  <button wx:if="{{coupon}}" class="rule-more" bindtap="onClickMore">
+    <block wx:if="{{collapse}}">
+      查看更多
+    </block>
+    <block wx:else>
+      收起
+    </block>
+  </button>
+
+  <view wx:if="{{!coupon}}" class="rule-empty">
+    <view>今天没有抽到优惠券哦</view>
+    明天再来试试吧～
   </view>
 </view>
 
 <view class="more-coupon">
-  <view class="semicircle" />
-  <view class="semicircle" />
-  <view class="semicircle" />
-
   <image class="more-coupon-bg" src="./images/more-coupon.png"></image>
 
-  <view class="semicircle" />
-  <view class="semicircle" />
-  <view class="semicircle" />
-
-  <text class="more-coupon-text">↓{{more}}↓</text>
+  <text class="more-coupon-text">{{more}}</text>
 </view>
 
 <view class="footer">
