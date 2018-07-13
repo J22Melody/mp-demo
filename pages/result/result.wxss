@@ -155,7 +155,7 @@ page {
 }
 
 .rules--collapse .rule {
-  height: 60px;
+  height: 64px;
   overflow: hidden;
 }
 
