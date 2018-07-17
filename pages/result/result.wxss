@@ -96,7 +96,7 @@ page {
 }
 
 .coupon {
-  margin-top: 6px;
+  /* margin-top: 6px; */
   color: #E4393C;
 }
 
