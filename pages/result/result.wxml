@@ -10,9 +10,9 @@
   <image wx-if="{{highDevice}}" class="firework" src="./images/fireworks.png"></image>
 
   <view class="main">
-    <image class="envelope" src="./images/envelope{{ coupon ? '' : '-empty' }}.png" mode="scaleToFill"></image>
+    <image class="envelope" src="./images/envelope{{ (coupon && coupon.omniCouponType !== 'NO_COUPON') ? '' : '-empty' }}.png" mode="scaleToFill"></image>
     
-    <view wx:if="{{coupon}}" class="content">
+    <view wx:if="{{coupon && coupon.omniCouponType !== 'NO_COUPON'}}" class="content">
       <view class="title">
         {{coupon.couponName}}
       </view>
@@ -31,9 +31,9 @@
       </view>
     </view>
 
-    <view wx:if="{{!coupon}}" class="content">
+    <view wx:else class="content">
       <view class="thanks">
-        感谢参与
+        {{coupon ? '感谢参与' : '没有数据'}}
       </view>
 
       <navigator class="action" url="/pages/cart/cart">
@@ -48,12 +48,12 @@
 </view>
 
 <view class="rules {{collapse ? 'rules--collapse' : ''}}">
-  <view wx:if="{{coupon}}" class="rule">
+  <view wx:if="{{coupon && coupon.omniCouponType !== 'NO_COUPON'}}" class="rule">
     <view class="rule-name">使用须知</view>
     <text>{{coupon.couponDesc}}</text>
   </view>
 
-  <button wx:if="{{coupon}}" class="rule-more" bindtap="onClickMore">
+  <button wx:if="{{coupon && coupon.omniCouponType !== 'NO_COUPON'}}" class="rule-more" bindtap="onClickMore">
     <block wx:if="{{collapse}}">
       查看更多
     </block>
@@ -62,7 +62,7 @@
     </block>
   </button>
 
-  <view wx:if="{{!coupon}}" class="rule-empty">
+  <view wx:if="{{coupon && coupon.omniCouponType === 'NO_COUPON'}}" class="rule-empty">
     <view>今天没有抽到优惠券哦</view>
     明天再来试试吧～
   </view>
@@ -79,11 +79,11 @@
 
   <view class="banner-wrapper">
     <navigator bindtap="onClickLink1" class="banner" target="miniProgram" app-id="wxcdc13dc8495e174e" path="/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4V8j857vjcKVkuMRGiojsWaLQBLR/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1">
-      <image src="./images/jd.png" mode="widthFix"></image>
+      <image src="https://mco-image-stage.walmartmobile.cn/image/JD2.png" mode="widthFix"></image>
     </navigator>
 
     <navigator bindtap="onClickLink2" class="banner" target="miniProgram" app-id="wxffb7d80f8c50ac5c" path="/pages/home/home?activityId=114310&type=12&&business=107">
-      <image src="./images/jddj.png" mode="widthFix"></image>
+      <image src="https://mco-image-stage.walmartmobile.cn/image/JDDJ2.png" mode="widthFix"></image>
     </navigator>
   </view>
 

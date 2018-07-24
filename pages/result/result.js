@@ -44,11 +44,11 @@ Page({
 
     this.setData({
       useNavigator,
-      coupon: coupon && coupon.omniCouponType !== 'NO_COUPON' && {
+      coupon: (coupon && coupon.omniCouponType !== 'NO_COUPON') ? {
         ...coupon,
         begin: coupon.beginTime.slice(0, 4) + '-' + coupon.beginTime.slice(4, 6) + '-' + coupon.beginTime.slice(6, 8),
         end: coupon.endTime.slice(0, 4) + '-' + coupon.endTime.slice(4, 6) + '-' + coupon.endTime.slice(6, 8),
-      },
+      } : coupon,
       // coupon: {
       //   couponDesc: `- 限扫玛购微信支付，单笔支付金额大于100元(含100元)可自动抵扣1.7元；
       //         - 购物券有效期2018年6月26日至2018年6月29日，请在有效期内使用；
