@@ -4,7 +4,7 @@ page {
 
 .main-wrapper {
   position: relative;
-  background: #ED1C10;
+  background: #EE1E10;
 }
 
 .main-wrapper--highDevice {
@@ -79,7 +79,7 @@ page {
   margin: 0 auto;
   width: 375px;
   max-width: 100vw;
-  height: 220px;
+  height: 175px;
 }
 
 .content {
@@ -90,13 +90,13 @@ page {
 }
 
 .title {
-  margin-top: 54px;
+  margin-top: 20px;
   font-size: 15px;
   color: #fff;
 }
 
 .coupon {
-  /* margin-top: 6px; */
+  margin-top: 2px; 
   color: #E4393C;
 }
 
@@ -115,7 +115,7 @@ page {
 }
 
 .thanks {
-  margin-top: 78px;
+  margin-top: 38px;
   margin-bottom: 18px;
   font-size: 28px;
   font-weight: 500;
@@ -124,7 +124,7 @@ page {
 
 .action {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 16px;
   padding: 6px 30px;
   background: #FFD200;
   border-radius: 2px;
@@ -134,7 +134,7 @@ page {
 }
 
 .add {
-  margin-top: 8px;
+  margin-top: 4px;
   font-size: 14px;
   color: #FFEABD;
 }
@@ -191,14 +191,15 @@ page {
   position: relative;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 8px;
-  height: 38px;
   text-align: center;
 }
 
 .more-coupon-bg {
-  width: 357px;
-  height: 34px;
+  width: 100%;
+}
+
+.more-coupon-bottom {
+  width: 100%;
 }
 
 .more-coupon-text {
@@ -208,32 +209,38 @@ page {
   bottom: 0;
   left: 0;
   margin: auto;
-  display: block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   width: 200px;
   font-size: 15px;
   font-weight: 600;
-  line-height: 34px;
   color: #fff;
 }
 
 .footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 8px 8px;
+  position: relative;
+  margin: 0 8px;
 }
 
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: calc((100vw - 2 * 8px - 5px) / 35 * 23);
+.footer-border {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 18px;
+  left: 0;
+  border: 1px solid #F69EA1;
+  border-top: none;
+  border-bottom: none;
+  pointer-events: none;
 }
 
-.footer-right {
-  width: calc((100vw - 2 * 8px - 5px) / 35 * 12);
+.banner-wrapper {
+  padding: 0 8px;
 }
 
 .banner {
+  margin: 10px 0;
   display: block;
   width: inherit;
 }

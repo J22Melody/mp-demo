@@ -70,18 +70,18 @@ Page({
       //   endTime: '20180615235959',
       // },
       // coupon: null,
-      more: '更多优惠券在这里哦',
+      step: 1,
       collapse: true,
       highDevice: wx.getSystemInfoSync().windowHeight > 700,
     })
 
     setInterval(() => {
       this.setData({
-        more: count % 2 === 0 ? '点击下方图片领取' : '更多优惠券在这里哦'
+        step: count % 2
       })
 
       count = count + 1
-    }, 2000)
+    }, 1000)
   },
 
   /**

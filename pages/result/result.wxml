@@ -68,25 +68,25 @@
   </view>
 </view>
 
-<view class="more-coupon">
-  <image class="more-coupon-bg" src="./images/more-coupon.png"></image>
-
-  <text class="more-coupon-text">{{more}}</text>
-</view>
-
 <view class="footer">
-  <view class="footer-left">
+  <view class="more-coupon">
+    <image class="more-coupon-bg" src="./images/top{{step}}.png" mode="widthFix"></image>
+
+    <text class="more-coupon-text">{{step === 0 ? '点击下方图片领取' : '更多优惠券在这里哦'}}</text>
+  </view>
+
+  <view class="footer-border"></view>
+
+  <view class="banner-wrapper">
     <navigator bindtap="onClickLink1" class="banner" target="miniProgram" app-id="wxcdc13dc8495e174e" path="/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4V8j857vjcKVkuMRGiojsWaLQBLR/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1">
-      <image src="https://mco-image-stage.walmartmobile.cn/image/jd.png" mode="widthFix"></image>
+      <image src="./images/jd.png" mode="widthFix"></image>
     </navigator>
+
     <navigator bindtap="onClickLink2" class="banner" target="miniProgram" app-id="wxffb7d80f8c50ac5c" path="/pages/home/home?activityId=114310&type=12&&business=107">
-      <image src="https://mco-image-stage.walmartmobile.cn/image/jddj.png" mode="widthFix"></image>
+      <image src="./images/jddj.png" mode="widthFix"></image>
     </navigator>
   </view>
 
-  <view class="footer-right">
-    <navigator bindtap="onClickLink1" class="footer-right banner" target="miniProgram" app-id="wxcdc13dc8495e174e" path="/pages/activityH5/activityH5?redirectUrl=https://pro.m.jd.com/mini/active/4V8j857vjcKVkuMRGiojsWaLQBLR/index.html?wxAppName=Kepler&wxAppId=wxcdc13dc8495e174e&siteId=WXAPP-JA2016-1">
-      <image src="https://mco-image-stage.walmartmobile.cn/image/cbec.png" mode="widthFix"></image>
-    </navigator>
-  </view>
+  <image class="more-coupon-bottom" src="./images/bottom{{step}}.png" mode="widthFix"></image>
 </view>
+
