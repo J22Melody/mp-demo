@@ -85,24 +85,37 @@ page {
 .content {
   position: absolute;
   top: 0;
+  bottom: 0;
   z-index: 2;
   width: 100%;
+  height: 100%;
 }
 
 .title {
-  margin-top: 20px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
   font-size: 15px;
   color: #fff;
 }
 
 .coupon {
-  margin-top: 2px; 
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
   color: #E4393C;
 }
 
 .coupon-amount {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  right: 0;
   font-size: 32px;
   font-weight: 500; 
+  color: #E4393C;
 }
 
 .coupon-small {
@@ -110,22 +123,30 @@ page {
 }
 
 .coupon-threshold {
-  margin-top: -4px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
   font-size: 14px;
+  color: #E4393C;
 }
 
 .thanks {
   margin-top: 38px;
-  margin-bottom: 18px;
   font-size: 28px;
   font-weight: 500;
   color: #E4393C;
 }
 
 .action {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 6px 30px;
+  position: absolute; 
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 6px 0;
+  width: 132px;
+  box-sizing: border-box;
   background: #FFD200;
   border-radius: 2px;
   box-shadow: #D94139 0 0 6px 0;
@@ -134,7 +155,10 @@ page {
 }
 
 .add {
-  margin-top: 4px;
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
   font-size: 14px;
   color: #FFEABD;
 }
@@ -195,11 +219,15 @@ page {
 }
 
 .more-coupon-bg {
+  position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .more-coupon-bottom {
+  position: relative;
   width: 100%;
+  z-index: 1;
 }
 
 .more-coupon-text {
@@ -208,6 +236,7 @@ page {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 2;
   margin: auto;
   display:flex;
   align-items:center;
@@ -227,7 +256,7 @@ page {
   position: absolute;
   top: 20px;
   right: 0;
-  bottom: 18px;
+  bottom: 14px;
   left: 0;
   border: 1px solid #F69EA1;
   border-top: none;

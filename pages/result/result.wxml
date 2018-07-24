@@ -17,10 +17,8 @@
         {{coupon.couponName}}
       </view>
 
-      <view class="coupon">
-        <view class="coupon-amount"><text class="coupon-small">￥</text>{{coupon.couponValue / 100}}</view>
-        <view class="coupon-threshold">满 ￥{{coupon.couponMininum / 100}} 元可用</view>
-      </view>
+      <view class="coupon-amount"><text class="coupon-small">￥</text>{{coupon.couponValue / 100}}</view>
+      <view class="coupon-threshold">满 ￥{{coupon.couponMininum / 100}} 元可用</view>
 
       <navigator class="action" url="/pages/cart/cart">
         立即使用
